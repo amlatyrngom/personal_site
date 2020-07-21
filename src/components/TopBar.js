@@ -6,9 +6,10 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Hidden from '@material-ui/core/Hidden';
-import GithubCircle from "mdi-material-ui/GithubCircle"
-import Linkedin from "mdi-material-ui/Linkedin"
 
+import Icon from '@mdi/react';
+import { mdiGithub } from '@mdi/js';
+import { mdiLinkedin } from '@mdi/js';
 
 import img1 from "../images/img1.png"
 
@@ -47,10 +48,10 @@ class TopBar extends Component {
           </Typography>
           <Hidden>
             <IconButton href="https://github.com/amlatyrngom" target="_blank" color="inherit">
-                <GithubCircle/>
+                <Icon path={mdiGithub} size={2} color="black"/>
             </IconButton>
             <IconButton href="https://www.linkedin.com/in/amadou-ngom-9b8a57111" target="_blank" color="inherit">
-                <Linkedin/>
+                <Icon path={mdiLinkedin} size={2} color="black"/>
             </IconButton>
           </Hidden>
         </Toolbar>

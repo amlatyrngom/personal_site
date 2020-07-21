@@ -8,8 +8,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 
 // Local
 import App from './components/App';
-import registerServiceWorker from './registerServiceWorker';
-import "./index.css"
+import "./index.css";
+import {unregister} from './registerServiceWorker';
 
 const theme = createMuiTheme({
   palette: {
@@ -33,4 +33,4 @@ ReactDOM.render(
     <App />
   </MuiThemeProvider>
   , document.getElementById('root'));
-registerServiceWorker();
+unregister();

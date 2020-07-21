@@ -4,7 +4,9 @@ import { withStyles } from '@material-ui/core/styles';
 import TopBar from "./TopBar.js"
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
-import FilePdfBox from 'mdi-material-ui/FilePdfBox';
+
+import Icon from '@mdi/react';
+import { mdiFilePdfBox } from '@mdi/js';
 
 import BlockItem from "./BlockItem.js"
 import resume from "../files/Resume.pdf"
@@ -58,7 +60,7 @@ class App extends Component {
                   You can contact me at <span className={classes.emailText}>amlatyrngom [at] protonmail.com</span>
                   <br/><br/>
                   <a href={resume} className={classes.resumeLink}>
-                    Resume <FilePdfBox/>
+                    Resume <Icon path={mdiFilePdfBox} size={1.5}/>
                   </a>
                 </BlockItem>
               </div>
