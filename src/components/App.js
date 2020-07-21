@@ -31,6 +31,9 @@ const styles = theme => ({
     color: theme.palette.primary.main,
     fontWeight: "bold",
   },
+  linkText: {
+    color: theme.palette.primary.main,
+  },
   resumeLink: {
     color: theme.palette.primary.main,
     fontWeight: "bold",
@@ -50,8 +53,8 @@ class App extends Component {
               <div className={classes.aboutMe}>
                 <BlockItem id="AAA" large title="About Me">
                   Hello! My name is Amadou.
-                  I am a computer science student at Carnegie Mellon University.
-                  My main areas of interest are Machine Learning, Distributed Systems and Web Development.
+                  I am a Computer Science student at Carnegie Mellon University.
+                  My main areas of interest are Database Systems, Distributed Systems and AI.
                   You can contact me at <span className={classes.emailText}>amlatyrngom [at] protonmail.com</span>
                   <br/><br/>
                   <a href={resume} className={classes.resumeLink}>
@@ -62,18 +65,22 @@ class App extends Component {
             </Grid>
             <Grid item xs={12} sm={6} md={7}>
               <div>
-                <BlockItem large title="Experience">
-                  <BlockItem title="Purestorage Intern">
-                    I interned for Purestorage during the 2018 summer. While there, I worked on optimizing data transfer between Pure Boxes and Amazon S3.
+                <BlockItem large title="Experience Overview">
+                  <BlockItem title="Database Systems Research">
+                    I work with <a className={classes.linkText} href="https://www.cs.cmu.edu/~pavlo/">Prof. Andy Pavlo</a> on the <a className={classes.linkText} href="https://github.com/cmu-db/terrier">NoisePage</a> system.
+                    My main focus is the vectorization/compilation based execution engine.
                   </BlockItem>
-                  <BlockItem title="Zillow Intern">
-                    I interned for Zillow during the 2017 summer. While there, I worked as a Web developer for the rentals platform.
+                  <BlockItem title="Database Systems TA">
+                    I was a teaching assistant for CMU's Database Systems course (15445) in Fall '19. I developed a class project on Volcano-style query execution.
                   </BlockItem>
                   <BlockItem title="Distributed Systems TA">
-                    I was a teaching assistant for the CMU Distributed Systems course (15440) in the spring of 2018. I will be TAing again in the fall of 2018.
+                    I was a teaching assistant for CMU's Distributed Systems course (15440) in Spring '18, Fall '18 and Spring '19. I was the head TA during Spring '19.
                   </BlockItem>
-                  <BlockItem title="Research">
-                    I worked with Professor Rashmi Vinayak on exploring techniques to improve EC-Cache, an in memory erasured coded distributed system built on top of the Alluxio Framework.
+                  <BlockItem title="Purestorage Intern">
+                    I interned for Purestorage during the Summer '18. I worked on optimizing data transfer between Pure Boxes and Amazon S3.
+                  </BlockItem>
+                  <BlockItem title="Zillow Intern">
+                    I interned for Zillow during the summer '17. I was a Web developer for the rentals platform.
                   </BlockItem>
                 </BlockItem>
               </div>
